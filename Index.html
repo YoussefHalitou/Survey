@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Streaming Services Survey</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" style="width: 0%;"></div>
+        </div>
+
+        <h1>Streaming Services Survey</h1>
+        <form id="surveyForm">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Age Field -->
+            <div class="form-group">
+                <label for="age"><i class="fas fa-birthday-cake"></i> Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            </div>
+
+            <!-- Country Field -->
+            <div class="form-group">
+                <label for="country"><i class="fas fa-globe"></i> Country:</label>
+                <input type="text" id="country" name="country" placeholder="Enter your country" required>
+            </div>
+
+            <!-- Question 1 -->
+            <div class="form-group">
+                <label>1. Do you use streaming services?</label>
+                <label><input type="radio" name="useStreaming" value="Yes" required> Yes</label>
+                <label><input type="radio" name="useStreaming" value="No"> No</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="form-group">
+                <label for="streamingServices">2. Which streaming services do you use? (Select all that apply)</label>
+                <label><input type="checkbox" name="streamingServices" value="Netflix"> Netflix</label>
+                <label><input type="checkbox" name="streamingServices" value="Hulu"> Hulu</label>
+                <label><input type="checkbox" name="streamingServices" value="HBO"> HBO</label>
+                <label><input type="checkbox" name="streamingServices" value="Amazon Prime"> Amazon Prime</label>
+                <label><input type="checkbox" name="streamingServices" value="Other"> Other</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="form-group">
+                <label for="timeSpent">3. How much time do you spend on streaming services per week?</label>
+                <select id="timeSpent" name="timeSpent" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="0-60 min">0-60 min</option>
+                    <option value="61-120 min">61-120 min</option>
+                    <option value="121-180 min">121-180 min</option>
+                    <option value="181-240 min">181-240 min</option>
+                    <option value="241-300 min">241-300 min</option>
+                    <option value="more than 300 min">More than 300 min</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
