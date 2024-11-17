@@ -1,50 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(to right, #007BFF, #00C6FF);
+    background-color: #f4f4f4;
     color: #333;
 }
 
 .container {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #007BFF;
 }
 
 label {
-    margin-top: 1rem;
     display: block;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
-input, select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+.form-group {
+    margin-bottom: 20px;
 }
 
-input:focus, select:focus {
-    outline: none;
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+p {
+    margin: 5px 0 10px;
+    font-style: italic;
+    color: #666;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 button {
+    display: block;
     width: 100%;
     padding: 10px;
     background-color: #007BFF;
@@ -52,7 +49,6 @@ button {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
-    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -61,17 +57,18 @@ button:hover {
     background-color: #0056b3;
 }
 
-.progress-bar {
-    width: 100%;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    overflow: hidden;
+/* Horizontal Options for Questions */
+.horizontal-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three options per row */
+    gap: 15px; /* Space between options */
+    align-items: center; /* Align content vertically */
 }
 
-.progress {
-    height: 10px;
-    background-color: #007BFF;
-    width: 0%;
-    transition: width 0.3s ease;
+/* Responsive Design */
+@media (max-width: 600px) {
+    .horizontal-options {
+        grid-template-columns: repeat(1, 1fr); /* One option per row on smaller screens */
+    }
 }
+
