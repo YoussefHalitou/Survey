@@ -10,6 +10,27 @@
     <div class="container">
         <h1>Streaming Services Survey</h1>
         <form id="surveyForm">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Birthday Field -->
+            <div class="form-group">
+                <label for="birthday">Birthday:</label>
+                <p style="font-style: italic;">Select your birth date using the calendar.</p>
+                <input type="date" id="birthday" name="birthday" required>
+            </div>
+
+            <!-- Country Field -->
+            <div class="form-group">
+                <label for="countryInput">Country:</label>
+                <p style="font-style: italic;">Type your country of residence. Suggestions will appear as you type.</p>
+                <input type="text" id="countryInput" name="country" placeholder="Start typing your country..." autocomplete="off" required>
+                <ul id="countrySuggestions" class="suggestions"></ul>
+            </div>
+
             <!-- Question 1 -->
             <div class="form-group">
                 <label>1. Do you use streaming services?</label>
@@ -38,12 +59,12 @@
                 <label for="timeSpent">3. How much time do you spend on streaming services per week?</label>
                 <p style="font-style: italic;">Please indicate the approximate time you spend on streaming platforms weekly.</p>
                 <div class="horizontal-options">
-                    <label><input type="checkbox" name="timeSpent" value="0-60 min"> 0-60 min</label>
-                    <label><input type="checkbox" name="timeSpent" value="61-120 min"> 61-120 min</label>
-                    <label><input type="checkbox" name="timeSpent" value="121-180 min"> 121-180 min</label>
-                    <label><input type="checkbox" name="timeSpent" value="181-240 min"> 181-240 min</label>
-                    <label><input type="checkbox" name="timeSpent" value="241-300 min"> 241-300 min</label>
-                    <label><input type="checkbox" name="timeSpent" value="More than 300 min"> More than 300 min</label>
+                    <label><input type="radio" name="timeSpent" value="0-60 min" required> 0-60 min</label>
+                    <label><input type="radio" name="timeSpent" value="61-120 min"> 61-120 min</label>
+                    <label><input type="radio" name="timeSpent" value="121-180 min"> 121-180 min</label>
+                    <label><input type="radio" name="timeSpent" value="181-240 min"> 181-240 min</label>
+                    <label><input type="radio" name="timeSpent" value="241-300 min"> 241-300 min</label>
+                    <label><input type="radio" name="timeSpent" value="More than 300 min"> More than 300 min</label>
                 </div>
             </div>
 

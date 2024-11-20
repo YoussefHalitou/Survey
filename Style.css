@@ -40,6 +40,17 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
+input[type="date"],
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 button {
     display: block;
     width: 100%;
@@ -70,5 +81,60 @@ button:hover {
     .horizontal-options {
         grid-template-columns: repeat(1, 1fr); /* One option per row on smaller screens */
     }
+}
+
+/* Suggestions container */
+.suggestions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px; /* Limit the height of the dropdown */
+    overflow-y: auto; /* Scroll if too many suggestions */
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Suggestion items */
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Highlight on hover */
+.suggestions li:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* General adjustments for spacing */
+.form-group {
+    margin-bottom: 30px; /* Increased spacing between form groups */
+}
+
+/* Add spacing between labels, text, and inputs */
+label {
+    margin-bottom: 5px; /* Add a small margin below labels */
+}
+
+p {
+    margin: 10px 0; /* Increased spacing between sentences */
+    font-style: italic;
+    color: #666;
+}
+
+/* Fix spacing specifically for the country field */
+#countrySuggestions {
+    margin-top: 5px; /* Add spacing between the input and suggestions list */
+}
+
+/* Horizontal line styling (if applicable) */
+.horizontal-options {
+    margin-top: 15px; /* Ensure adequate space above and below options */
+    gap: 20px; /* Increase spacing between horizontal options */
 }
 
